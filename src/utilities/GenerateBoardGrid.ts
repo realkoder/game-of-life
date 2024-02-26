@@ -21,15 +21,14 @@ const randomizeAdding = (grid: number[][]) => {
     while (counter <= 150) {
 
         if (insertedCells.findIndex(value => value.col === randomRow && value.row === randomCol) === -1) {
-            grid[randomRow][randomCol] = 1;            
+            grid[randomRow][randomCol] = 1;      
             insertedCells.push({ row: randomRow, col: randomCol });
-            ++counter;
+            ++counter;            
         }
 
         randomRow = getRandomNumber(grid.length);
         randomCol = getRandomNumber(grid.length);
-    }
-    console.log(insertedCells.length);
+    }    
     return grid;
 }
 
